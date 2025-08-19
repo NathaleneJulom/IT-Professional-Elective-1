@@ -1,4 +1,5 @@
 //Julom, Nathalene S.
+//BSIT - 3B
 //Activity 1: Basic Math with Condition
 
 class BasicMath {
