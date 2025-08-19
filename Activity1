@@ -1,0 +1,51 @@
+//Julom, Nathalene S.
+//Activity 1: Basic Math with Condition
+
+import java.util.Scanner;
+
+class BasicMath {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("First Number: ");
+        double num1 = scanner.nextDouble();
+        System.out.print("Second Number: ");
+        double num2 = scanner.nextDouble();
+        
+        scanner.nextLine();
+        
+        System.out.print("Select an operation (+ - * /): ");
+        String op = scanner.nextLine();
+        
+        double sum, difference, product, quotient;
+        
+        switch (op) {
+            case "+":
+                sum = num1 + num2;
+                System.out.println("The sum of " + num1 + " and " + num2 + " is " + sum);
+                break;
+            case "-":
+                difference = num1 - num2;
+                System.out.println("The difference of " + num1 + " and " + num2 + " is " + difference);
+                break;
+            case "*":
+                product = num1 * num2;
+                System.out.println("The product of " + num1 + " and " + num2 + " is " + product);
+                break;
+            case "/":
+                if (num2 != 0) {
+                    quotient = num1 / num2;
+                    System.out.println("The quotient of " + num1 + " and " + num2 + " is " + quotient);
+                }
+                else {
+                    System.out.println("Error: Can't divide by zero.");
+                }
+                break;
+            default:
+                System.out.println("Invalid operation.");
+                break;
+        }
+        
+        scanner.close();
+    }
+}
